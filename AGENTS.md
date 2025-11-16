@@ -8,9 +8,9 @@
 
 ### Core Technologies
 
-- **TypeScript**: 最新バージョン
+- **TypeScript**: v5.7
 - **Node.js**: v22 (LTS)
-- **Next.js (App Router)**: v16 (最新)
+- **Next.js**: v16 (App Router + Cache Components)
 - **React**: v19.2 (最新)
 - **React Compiler**: 有効
 
@@ -22,6 +22,7 @@
 ### UI・スタイリング
 
 - **shadcn/ui**: UIコンポーネントライブラリ
+- **Tailwind CSS**: v4
 
 ### コード品質・フォーマット
 
@@ -99,6 +100,7 @@ chore(deps): Next.js を v16 にアップデート
 ### Next.js v16 の機能
 
 - **App Router**: 最新のルーティング機能を使用
+- **Cache Components**: コンポーネントレベルのキャッシング機能を有効化（高速レンダリング）
 - **Server Components**: デフォルトでサーバーコンポーネントを使用
 - **Server Actions**: フォーム送信やデータ変更に使用
 
