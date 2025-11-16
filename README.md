@@ -6,15 +6,15 @@ Next.js 16 + React 19.2 + AWS Cognito を使用した認証サンプルアプリ
 
 ## 技術スタック
 
-- **Next.js**: v16 (App Router + Cache Components)
-- **React**: v19.2 (React Compiler 有効)
-- **TypeScript**: v5.7
+- **Next.js**: v16.0.3 (App Router + Cache Components)
+- **React**: v19.2.0 (React Compiler 有効)
+- **TypeScript**: v5.9.3
 - **AWS Cognito**: Authorization Code Flow with PKCE
-- **openid-client**: v6 - OpenID Connect クライアント
-- **iron-session**: v8 - セッション管理
+- **openid-client**: v6.8.1 - OpenID Connect クライアント
+- **iron-session**: v8.0.4 - セッション管理
 - **shadcn/ui**: UIコンポーネントライブラリ
-- **Tailwind CSS**: v4 - スタイリング
-- **ESLint**: v9 + Prettier - コード品質・フォーマット
+- **Tailwind CSS**: v4.1.17 - スタイリング
+- **ESLint**: v9.39.1 + Prettier v3.6.2 - コード品質・フォーマット
 
 ## 機能
 

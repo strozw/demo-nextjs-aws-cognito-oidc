@@ -8,26 +8,26 @@
 
 ### Core Technologies
 
-- **TypeScript**: v5.7
+- **TypeScript**: v5.9.3
 - **Node.js**: v22 (LTS)
-- **Next.js**: v16 (App Router + Cache Components)
-- **React**: v19.2 (最新)
-- **React Compiler**: 有効
+- **Next.js**: v16.0.3 (App Router + Cache Components)
+- **React**: v19.2.0
+- **React Compiler**: v1.0.0 (有効)
 
 ### 認証・セッション管理
 
-- **openid-client**: v6 (最新) - OpenID Connect クライアント実装
-- **iron-session**: セッション管理
+- **openid-client**: v6.8.1 - OpenID Connect クライアント実装
+- **iron-session**: v8.0.4 - セッション管理
 
 ### UI・スタイリング
 
 - **shadcn/ui**: UIコンポーネントライブラリ
-- **Tailwind CSS**: v4
+- **Tailwind CSS**: v4.1.17
 
 ### コード品質・フォーマット
 
-- **ESLint**: v9 - コード品質チェック
-- **Prettier**: コードフォーマッター
+- **ESLint**: v9.39.1 - コード品質チェック
+- **Prettier**: v3.6.2 - コードフォーマッター
 
 ## Git コミット規約
 
