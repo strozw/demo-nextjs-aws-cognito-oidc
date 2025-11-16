@@ -2,6 +2,8 @@
 
 Next.js 16 + React 19.2 + AWS Cognito を使用した認証サンプルアプリケーションです。
 
+> **Note:** このプロジェクトのベースは [Claude Code](https://claude.com/claude-code) によって生成されました。
+
 ## 技術スタック
 
 - **Next.js**: v16 (App Router)
