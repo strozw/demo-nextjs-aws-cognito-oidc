@@ -17,9 +17,10 @@ test.describe('Dashboard Page', () => {
     await page.goto(baseURL);
     await page.getByRole('button', { name: 'ログイン' }).click();
     await page.waitForURL(/.*amazoncognito\.com.*/);
-    await page.fill('input[name="username"]', testEmail);
-    await page.fill('input[name="password"]', testPassword);
-    await page.click('input[type="submit"][name="signInSubmitButton"]');
+    // 視覚的に表示されているフォームを使用
+    await page.fill('input[name="username"]:visible', testEmail);
+    await page.fill('input[name="password"]:visible', testPassword);
+    await page.click('input[type="submit"][name="signInSubmitButton"]:visible');
     await page.waitForURL(baseURL);
     await expect(page.getByText('ようこそ!')).toBeVisible();
   }

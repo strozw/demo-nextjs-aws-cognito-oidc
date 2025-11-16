@@ -7,9 +7,7 @@ test.describe('Authentication Flow', () => {
 
   // 環境変数のチェック
   if (!testEmail || !testPassword) {
-    throw new Error(
-      'TEST_USER_EMAIL and TEST_USER_PASSWORD must be set in .env.local file'
-    );
+    throw new Error('TEST_USER_EMAIL and TEST_USER_PASSWORD must be set in .env.local file');
   }
 
   test.beforeEach(async ({ page }) => {
@@ -34,12 +32,13 @@ test.describe('Authentication Flow', () => {
     // Cognitoのログインページにリダイレクトされるまで待機
     await page.waitForURL(/.*amazoncognito\.com.*/, { timeout: 10000 });
 
-    // メールアドレスとパスワードを入力
-    await page.fill('input[name="username"]', testEmail);
-    await page.fill('input[name="password"]', testPassword);
+    // 視覚的に表示されているフォームを使用
+    // Cognitoは複数のフォームを持っているため、visible: trueオプションを使用
+    await page.fill('input[name="username"]:visible', testEmail);
+    await page.fill('input[name="password"]:visible', testPassword);
 
-    // サインインボタンをクリック
-    await page.click('input[type="submit"][name="signInSubmitButton"]');
+    // サインインボタンをクリック（表示されているボタンのみ）
+    await page.click('input[type="submit"][name="signInSubmitButton"]:visible');
 
     // アプリケーションにリダイレクトされるまで待機
     await page.waitForURL(baseURL, { timeout: 15000 });
@@ -59,9 +58,9 @@ test.describe('Authentication Flow', () => {
     // まずログイン
     await page.getByRole('button', { name: 'ログイン' }).click();
     await page.waitForURL(/.*amazoncognito\.com.*/);
-    await page.fill('input[name="username"]', testEmail);
-    await page.fill('input[name="password"]', testPassword);
-    await page.click('input[type="submit"][name="signInSubmitButton"]');
+    await page.fill('input[name="username"]:visible', testEmail);
+    await page.fill('input[name="password"]:visible', testPassword);
+    await page.click('input[type="submit"][name="signInSubmitButton"]:visible');
     await page.waitForURL(baseURL);
 
     // ログイン成功を確認
