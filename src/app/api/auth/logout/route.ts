@@ -10,8 +10,6 @@ export async function GET() {
     // Cognitoのログアウトエンドポイントにリダイレクト
     const logoutUrl = getLogoutUrl();
 
-    console.log(logoutUrl);
-
     return NextResponse.redirect(logoutUrl);
   } catch (error) {
     console.error('Logout error:', error);

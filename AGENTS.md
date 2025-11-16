@@ -131,7 +131,8 @@ chore(deps): Next.js を v16 にアップデート
 
 ```env
 # AWS Cognito
-COGNITO_DOMAIN=your-domain.auth.region.amazoncognito.com
+COGNITO_USER_POOL_URL=https://cognito-idp.your-region.amazonaws.com/your-user-pool-id
+COGNITO_AUTH_URL=http://your-user-pool-id-sub-domain.auth.your-region.amazoncognito.com
 COGNITO_CLIENT_ID=your-client-id
 COGNITO_REDIRECT_URI=http://localhost:3000/api/auth/callback
 COGNITO_LOGOUT_URI=http://localhost:3000

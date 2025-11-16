@@ -78,7 +78,7 @@ export function parseIdToken(idToken: string) {
 
 // ログアウトURLを生成
 export function getLogoutUrl(): string {
-  const COGNITO_DOMAIN = getEnvVar('COGNITO_DOMAIN');
+  const COGNITO_AUTH_URL = getEnvVar('COGNITO_AUTH_URL');
   const COGNITO_CLIENT_ID = getEnvVar('COGNITO_CLIENT_ID');
   const COGNITO_LOGOUT_URI = getEnvVar('COGNITO_LOGOUT_URI');
 
@@ -87,5 +87,5 @@ export function getLogoutUrl(): string {
     logout_uri: COGNITO_LOGOUT_URI,
   });
 
-  return `https://${COGNITO_DOMAIN}/logout?${params.toString()}`;
+  return `${COGNITO_AUTH_URL}/logout?${params.toString()}`;
 }

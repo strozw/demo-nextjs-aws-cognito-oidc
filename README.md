@@ -84,7 +84,8 @@ cp .env.example .env.local
 
 ```env
 # AWS Cognito Configuration
-COGNITO_DOMAIN=your-app-name.auth.ap-northeast-1.amazoncognito.com
+COGNITO_USER_POOL_URL=https://cognito-idp.your-region.amazonaws.com/your-user-pool-id
+COGNITO_AUTH_URL=http://your-user-pool-id-sub-domain.auth.your-region.amazoncognito.com
 COGNITO_CLIENT_ID=your-client-id-from-cognito
 COGNITO_REDIRECT_URI=http://localhost:3000/api/auth/callback
 COGNITO_LOGOUT_URI=http://localhost:3000
