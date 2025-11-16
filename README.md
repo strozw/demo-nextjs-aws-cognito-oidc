@@ -261,7 +261,7 @@ Cognito のユーザープールでテストユーザーを作成:
 - [Next.js Documentation](https://nextjs.org/docs)
 - [React Documentation](https://react.dev)
 - [AWS Cognito Documentation](https://docs.aws.amazon.com/cognito/)
-- [openid-client Documentation](https://github.com/panva/node-openid-client)
+- [openid-client Documentation](https://github.com/panva/openid-client)
 - [iron-session Documentation](https://github.com/vvo/iron-session)
 - [shadcn/ui Documentation](https://ui.shadcn.com)
 - [Conventional Commits](https://www.conventionalcommits.org/)

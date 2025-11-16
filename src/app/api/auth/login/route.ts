@@ -11,7 +11,7 @@ export async function GET() {
 
     // セッションにPKCEパラメータを保存
     const session = await getSession();
-    session.code_verifier = code_verifier;
+    session.codeVerifier = code_verifier;
     session.state = state;
     await session.save();
 

@@ -9,7 +9,7 @@ export interface SessionData {
   idToken?: string;
   expiresAt?: number;
   isLoggedIn: boolean;
-  code_verifier?: string;
+  codeVerifier?: string;
   state?: string;
 }
 
@@ -37,6 +37,7 @@ export async function createSession(data: {
   idToken: string;
   expiresIn: number;
 }): Promise<void> {
+  // NOTE: cookie のサイズ制限(4KB)に注意して、必要最低限の情報のみ保存する
   const session = await getSession();
   session.userId = data.userId;
   session.email = data.email;

@@ -14,20 +14,20 @@ export async function GET(request: NextRequest) {
 
     // セッションからPKCEパラメータを取得
     const session = await getSession();
-    const code_verifier = session.code_verifier;
-    const saved_state = session.state;
+    const codeVerifier = session.codeVerifier;
+    const savedState = session.state;
 
-    if (!code_verifier || !saved_state) {
+    if (!codeVerifier || !savedState) {
       return NextResponse.redirect(new URL('/?error=invalid_session', request.url));
     }
 
     // stateを検証
-    if (state !== saved_state) {
+    if (state !== savedState) {
       return NextResponse.redirect(new URL('/?error=invalid_state', request.url));
     }
 
     // 認可コードをトークンに交換
-    const tokens = await exchangeCodeForTokens(code, code_verifier);
+    const tokens = await exchangeCodeForTokens(code, codeVerifier);
 
     if (!tokens.access_token || !tokens.id_token) {
       return NextResponse.redirect(new URL('/?error=invalid_tokens', request.url));
