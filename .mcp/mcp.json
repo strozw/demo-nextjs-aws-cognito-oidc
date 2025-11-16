@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "next-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-nextjs@latest"
+      ]
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-shadcn@latest"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}
