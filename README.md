@@ -166,7 +166,54 @@ npm run lint
 
 # コードのフォーマット
 npm run format
+
+# E2Eテスト（Playwright）
+npm run test:e2e         # ヘッドレスモードでテスト実行
+npm run test:e2e:ui      # UIモードでテスト実行
+npm run test:e2e:headed  # ブラウザを表示してテスト実行
 ```
+
+## E2Eテスト
+
+このプロジェクトでは、Playwrightを使用したE2Eテストが含まれています。
+
+### テストの準備
+
+テストを実行する前に、`.env.local`ファイルにテスト用の認証情報を設定してください：
+
+```env
+TEST_USER_EMAIL=your-test-user@example.com
+TEST_USER_PASSWORD=your-test-password
+```
+
+**注意**: テスト用のユーザーは事前にCognito User Poolに作成しておく必要があります。
+
+### テストの実行
+
+```bash
+# 開発サーバーを起動（別のターミナルで）
+npm run dev
+
+# テストを実行
+npm run test:e2e
+```
+
+### テストの内容
+
+- **認証テスト (`e2e/auth.spec.ts`)**
+  - ログイン機能
+  - ログアウト機能
+  - 未認証時のリダイレクト
+
+- **ホームページテスト (`e2e/home.spec.ts`)**
+  - ページ表示の確認
+  - レスポンシブデザイン
+  - UI要素の存在確認
+
+- **ダッシュボードテスト (`e2e/dashboard.spec.ts`)**
+  - 認証後のダッシュボードアクセス
+  - ユーザー情報の表示
+  - ナビゲーション機能
 
 ## 認証フロー
 
