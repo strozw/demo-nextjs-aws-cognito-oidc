@@ -95,9 +95,6 @@ COGNITO_LOGOUT_URI=http://localhost:3000
 
 # Session Secret (32文字以上のランダムな文字列)
 SESSION_SECRET=your-session-secret-at-least-32-characters-long
-
-# Node Environment
-NODE_ENV=development
 ```
 
 SESSION_SECRET の生成方法:
