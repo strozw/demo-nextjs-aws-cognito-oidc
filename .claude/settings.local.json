@@ -2,6 +2,7 @@
   "enabledMcpjsonServers": [
     "next-devtools",
     "shadcn",
-    "playwright"
+    "playwright",
+    "chrome-devtools"
   ]
 }
